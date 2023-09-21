@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de Multiplicar</title>
+
+
+    <style>
+ 
+        .ima{
+            width: 350px;
+            height: 350px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tabla de Multiplicar</h1>
+    <label for="numero">Ingresa un número:</label>
+    <input type="number" id="numero">
+    <button onclick="imprimirTabla()">Imprimir</button>
+    <p id="tabla"></p>
+
+   
+    <script>
+        function imprimirTabla() {
+            // Obtener el número ingresado por el usuario
+            const numero = parseInt(document.getElementById("numero").value);
+            
+            // Verificar si el número es válido
+            if (!isNaN(numero)) {
+                let tablaMultiplicar = "";
+                for (let i = 1; i <= 10; i++) {
+                    // Calcular el producto
+                    const producto = numero * i;
+                    // Agregar la línea a la tabla
+                    tablaMultiplicar += `${numero} x ${i} = ${producto}<br>`;
+                }
+                // Mostrar la tabla en pantalla
+                document.getElementById("tabla").innerHTML = tablaMultiplicar;
+            } else {
+                // Mostrar un mensaje de error si el número ingresado no es válido
+                document.getElementById("tabla").innerHTML = "Por favor, ingresa un número válido.";
+            }
+        }
+        <img src="imagenes/matematica.jpg" alt="Multiplicaciones">
+    </script>
+
+    <a href="Musica.html" target="_blank"> REPRODUCIR </a>
+   <p> </p>
+   <a href="informatica.html" target="_blank"> Ver </a>   
+
+</body>
+</html>
+
+
+
